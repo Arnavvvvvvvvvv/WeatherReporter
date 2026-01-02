@@ -32,3 +32,49 @@ WeatherReporter/
 │ └── index.ejs
 ├── index.js
 ├── package.json
+
+## How to Run
+
+1. Install dependencies  
+   npm install
+
+2. Add your OpenWeatherMap API key in `index.js`  
+   const API_KEY = "YOUR_API_KEY";
+
+3. Start the server  
+   nodemon index.js  
+   or  
+   node index.js
+
+4. Open in browser  
+   http://localhost:3000
+
+---
+
+## Usage
+
+- Enter a city name in the search box.
+- Click **Go** to fetch weather data.
+- View temperature, weather conditions, and suggestions.
+- Background animation updates based on weather.
+- Date and time are displayed at the top.
+
+---
+
+## Notes
+
+- Internet connection is required to fetch weather data.
+- If an invalid city is entered, an error message is shown.
+- Weather suggestions are based on temperature and conditions.
+
+---
+
+## License
+
+This project is for **educational purposes only**.
+
+---
+
+## Author
+
+Arnav Jain
