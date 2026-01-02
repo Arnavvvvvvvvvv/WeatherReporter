@@ -8,8 +8,15 @@ app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }));
 
 const now = new Date();
-const currentDate = now.toDateString(); 
-const currentTime = now.toLocaleTimeString([], {
+const currentDate = now.toLocaleDateString("en-IN", {
+  timeZone: "Asia/Kolkata",
+  weekday: "short",
+  day: "numeric",
+  month: "short",
+  year: "numeric"
+});
+const currentTime = now.toLocaleString("en-IN", {
+  timeZone: "Asia/Kolkata",
   hour: "2-digit",
   minute: "2-digit"
 });
@@ -119,4 +126,5 @@ const weatherData = {
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+
 });
