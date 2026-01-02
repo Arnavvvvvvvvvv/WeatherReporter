@@ -13,9 +13,6 @@ It fetches real-time weather data using the **OpenWeatherMap API** and displays 
 - 📊 Pressure  
 - 🌅 Sunrise and 🌇 Sunset time  
 - 💡 Smart weather-based suggestions  
-- 🎨 Animated background based on weather conditions  
-- ⏰ Current date and time (HH:MM)  
-- 📌 Sticky footer  
 - ❌ Error handling for invalid cities  
 
 ## 🛠️ Tech Stack
@@ -26,3 +23,13 @@ It fetches real-time weather data using the **OpenWeatherMap API** and displays 
 - 🧩 EJS  
 - 🎨 HTML & CSS  
 - ☁️ OpenWeatherMap API  
+
+## 📁 Project Structure
+WeatherReporter/
+├── public/
+│ ├── style.css
+│ └── weather-bg.js
+├── views/
+│ └── index.ejs
+├── index.js
+├── package.json
