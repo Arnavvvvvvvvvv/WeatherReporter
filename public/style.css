@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.datetime {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.error {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.search-bar {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #00c6ff;
+  color: #000;
+  font-weight: 600;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.coordinates {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.temperature img {
+  width: 100px;
+}
+
+.temperature h1 {
+  font-size: 3rem;
+}
+
+.suggestion {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffd166;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.boxes div {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px;
+  /* padding-left: 1px; */
+  border-radius: 12px;
+  min-width: 150px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.main-table {
+  margin-top: 30px;
+}
+
+.main-table h2 {
+  margin-bottom: 15px;
+}
+
+.main-table p {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+
+.main-table p:last-child {
+  border-bottom: none;
+}
+
+footer {
+  margin-top: auto;   
+  font-size: 0.85rem;
+  opacity: 0.7;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .boxes {
+    flex-direction: column;
+  }
+
+  .datetime {
+    position: static;
+    margin-bottom: 20px;
+  }
+}

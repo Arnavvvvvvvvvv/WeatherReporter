@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Update</title>
+    <link rel="stylesheet" href="/style.css">
+    <link data-default-icon="https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=" size="192x192" rel="icon"
+    href="https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4="/>
+</head>
+<body>
+    <h1>WeatherReporter</h1>
+    <div class="datetime">📅 <%= date %> | ⏰ <%= time %></div>
+
+    <%if(error){%>
+        <p class="error" style="color: red;"><%=error%></p>
+    <%}%>
+
+    <form action="/weather" method="post">
+        <div class="search-bar">
+        <label for="city">Enter City name to get weather data:</label>
+        <input type="text" name="city" placeholder="Search here" required>
+        <button type="submit">Go</button>
+        </div>
+    </form>
+
+    <%if(weather){%>
+        <div class="weather-card">
+            <h2><%=weather.city%>, <%=weather.country%> Weather Forecast</h2>
+            <p class="coordinates">
+                📍 Latitude: <%= weather.latitude %>N | Longitude: <%= weather.longitude %>E
+            </p>
+
+            <div class="temperature">
+            <img src="https://openweathermap.org/img/wn/<%= weather.icon %>@2x.png" alt="weather icon"/>
+
+            <h1><%= weather.temperature %>°C</h1>
+            <p>Feels like <%= weather.feelsLike %>°C</p>
+            <p class="suggestion"><%= weather.suggestion %></p>
+            </div>
+
+            <div class="boxes">
+                <div class="a">
+                    <b>Min Temp:</b> <%= weather.mintemp %>°C
+                    <b>Max Temp:</b> <%= weather.maxtemp %>°C
+                </div>
+
+                <div class="b">
+                    <b>Humidity:</b> <%= weather.humidity%> 
+                </div>
+
+                <div class="c">
+                    <b>Pressure:</b> <%= weather.pressure%> hPa
+                </div>
+
+                <div class="d">
+                    <b>Windspeed:</b> <%=weather.windSpeed%>m/s
+                </div>
+            </div>
+
+            <div class="main-table">
+                <h2>Weather data</h2>
+                <p><b>Description:</b> <%=weather.description%></p>
+                <p><b>Sunrise Time:</b> <%=weather.sunrise%></p>
+                <p><b>Sunset Time:</b> <%=weather.sunset%></p>
+                <p><b>Weather conditions:</b> <%=weather.condition%></p>
+            </div>
+
+        </div>
+    <%}%>
+<footer>
+    © The WeatherReporter, All rights reserved.
+</footer>
+</body>
+</html>
