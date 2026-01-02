@@ -28,7 +28,6 @@ It fetches real-time weather data using the **OpenWeatherMap API** and displays 
 WeatherReporter/
 ├── public/
 │ ├── style.css
-│ └── weather-bg.js
 ├── views/
 │ └── index.ejs
 ├── index.js
