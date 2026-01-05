@@ -47,7 +47,7 @@ WeatherReporter/
    node index.js
 
 4. Open in browser  
-   http://localhost:3000
+   weatherreporter.onrender.com
 
 ---
 
